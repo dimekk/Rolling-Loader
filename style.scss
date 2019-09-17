@@ -1,0 +1,49 @@
+$bgColor: rgb(45, 45, 45);
+$barColor: #fff;
+$other: #4973ff;
+html {
+    overflow: hidden;
+}
+body {
+    height: 100%;
+    background: $bgColor;
+    align-items: center;
+    justify-content: center;    
+    overflow: hidden;
+}
+
+    .bar {
+        position: relative;
+        height: 2px;
+        width: 300px;
+        margin: 0 auto;
+        background: $barColor;
+        margin-top: 350px;
+
+        .roller {
+            position: absolute;
+            top: -28px;
+            margin-left: -5px;
+            height: 30px;
+            width: 30px;
+            left: 0;
+            background: $barColor;
+            border-radius: 35%;
+            animation: roll 5s infinite;
+        }
+        .loader {
+            position: absolute;
+            top: -35px;
+            right: 0px;;
+            text-transform: uppercase;
+            color: $bgColor;
+            font-family: monospace;
+            font-weight: bold;
+        }
+    }
+    @keyframes roll {
+        0% { left: 0; }
+        50% { left: 78%; transform: rotate(450deg); width: 90px; height: 90px; }
+        75% { left: 78%; transform: rotate(450deg); width: 90px; height: 90px; }
+        100% { right: 100%; } 
+      } 
